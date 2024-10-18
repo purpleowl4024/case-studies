@@ -74,7 +74,7 @@ void setup()
   minim = new Minim(this); //load from data directory, loadFile should also load from project folder
   //
   // Load Music
-  String musicPathway = "Music/";
+  String musicPathway = "music/";
   String mp3FileName = ".mp3";
   //Alphebetical order, same as OS ordering files
   String BeatYourCompetition = "Beat_Your_Competition";
@@ -82,12 +82,13 @@ void setup()
   String otherside = "otherside";
   //
   //Add Reading into Array
-  String directory = "./" + musicPathway;
+  String directory = "../../" + musicPathway;
   String file = directory + BeatYourCompetition + mp3FileName;
   song[currentSong] = minim.loadFile( file );
   file = directory + OneHourMinecraftPigstep + mp3FileName;
   song[currentSong+=1] = minim.loadFile( file );
   file = directory + otherside + mp3FileName;
+  song[currentSong+=1] = minim.loadFile( file );
   //
   currentSong = 0;
   //
