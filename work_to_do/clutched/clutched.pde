@@ -188,13 +188,28 @@ void keyPressed() {
    */
   //if ( key=='S' || key=='s' ) song[currentSong].pause(); //Simple Stop, no double taps
   //
-  if ( key=='S' | key=='s' ) {
-    if ( song[currentSong].isPlaying() ) {
-      song[currentSong].pause(); //single tap
-    } else {
-      song[currentSong].rewind(); //double tap
-    }
+  if ( key=='L'  || key=='l' ) ; song[currentSong].loop(1);//loop once:plays,then plays again,then stop & rewinds
+  if ( key=='L'  || key=='l' ) ; song[currentSong].loop(-1);//loop infintity//parameter:blank or -1
+  if ( key=='F'  || key=='f' )song[currentSong].skip(10000) ; // fast forward,rewind,& play again //parameter:milliseconds
+  if ( key=='R'  || key=='r' )song[currentSong].skip(10000) ; //fast reverse & play //parameter:negative numbers
+  if ( key=='M'  || key=='m' ) ; { //mute
+     //
+     if(song[currentSong].isMuted() ) {
+      song[currentSong].unmute();
+     } else {
+       song[currentSong].mute();
+     }
   }
-} //End keyPressed
+  if ( key=='O'  || key=='o' ) ; //pause
+  //
+  if (song[currentSong].isPlaying() ) {
+   song[currentSong].pause();
+  }else{
+    song[currentSong].play();
+  }
+}
+
+//if ( key==Coded|| keyCode=='ESC');// QUIT
+ //End Main Program
 //
 // End Main Program
