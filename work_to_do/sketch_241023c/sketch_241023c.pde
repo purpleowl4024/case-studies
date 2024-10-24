@@ -227,8 +227,24 @@ void keyPressed() {
   if ( key==CODED || keyCode==ESC ) exit(); // QUIT //UP
   if ( key=='Q' || key=='q' ) exit(); // QUIT
   //
-  //if ( key=='' || key=='' ) ; // NEXT //See .txt for starter hint
-  //if ( key=='' || key=='' ) ; // Previous //Students to finish
+  if ( key=='N' || key=='n' ) { // NEXT //See .txt for starter hint
+    if ( song[currentSong].isPlaying() )  {
+      song[currentSong}.pause();
+      song[currentSong].rewind();
+      //
+       if ( currentSong==7 ) {
+         currentSong = 0;
+       } else {
+         currentSong++;
+       }
+      println("The current song is", currentSong);
+      song[currentSong].play();
+  } else {
+    //
+    println("The current song is",currentSong);
+  }
+}
+ //if ( key=='' || key=='' ) ; // Previous //Students to finish
   //
   //if ( key=='' || key=='' ) ; // Shuffle - PLAY (Random)
   //if ( key=='' || key=='' ) ; // Play-Pause-STOP
