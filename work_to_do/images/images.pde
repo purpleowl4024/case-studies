@@ -17,12 +17,12 @@ void setup() {
   backgroundImageY = appHeight*0;
   backgroundImageWidth = appWidth-1;
   backgroundImageHeight = appHeight-1;
-  picBackground = loadImage("../../../../Images/Square/SoccerBall.jpg");
+  picBackground = loadImage("../../image/Minecraft.jpg");
   bikeX_Changed = bikeX = appWidth * 1/4;
   bikeY_Changed = bikeY = appHeight * 1/4;
   bikeWidth = appWidth * 1/2;
   bikeHeight = appHeight * 1/2;
-  picBike = loadImage("../../../../Images/Landscape/Minecraft.jpg");
+  picBike = loadImage("../../image/sword.jpg");
   picBikeWidthChanged = picBikeWidth = 860;
   picBikeHeightChanged = picBikeHeight = 529;
   //
@@ -55,8 +55,8 @@ void setup() {
 //
 void draw() {
   //Draw Image One Time, for testing
-  //image( picBackground, backgroundImageX, backgroundImageY, backgroundImageWidth, backgroundImageHeight );
-  //image( picBike, bikeX_Changed, bikeY_Changed, picBikeWidthChanged, picBikeHeightChanged );
+  image( picBackground, backgroundImageX, backgroundImageY, backgroundImageWidth, backgroundImageHeight );
+  image( picBike, bikeX_Changed, bikeY_Changed, picBikeWidthChanged, picBikeHeightChanged );
 }
 //
 void mousePressed() {
