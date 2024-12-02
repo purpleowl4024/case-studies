@@ -7,7 +7,7 @@ import ddf.minim.ugens.*;
 //
 //Global Variables
 Minim minim;
-int numberOfSongs = 8; //Able to Autodetect based on Pathway
+int numberOfSongs = 3; //Able to Autodetect based on Pathway
 AudioPlayer[] song = new AudioPlayer[numberOfSongs];
 int currentSong = numberOfSongs - numberOfSongs;  //beginning current song as ZERO
 //
@@ -38,6 +38,7 @@ void setup()
   musicButtonDIV_X = musicButtonDIV_Width - musicButtonDIV_Width*1/2;
   musicButtonDIV_Y = musicButtonDIV_Height- musicButtonDIV_Height*1/2;
   //Use if statement to change, introduce ternary operator
+  
   //
   //Population (Variables)
   //Work out a case Study: shorter  side of DIV
